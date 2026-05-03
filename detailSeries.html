@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Witcher Season 1</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/footer.js" type="module"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const saveIcon = document.querySelector(".icon-save");
+        const likeIcons = document.querySelectorAll(".icon-like");
+        const dislikeIcons = document.querySelectorAll(".icon-dislike");
+
+        saveIcon?.addEventListener("click", () => {
+          saveIcon.classList.toggle("text-yellow-400");
+          saveIcon.classList.toggle("text-white");
+        });
+
+        likeIcons.forEach((likeIcon) => {
+          likeIcon.addEventListener("click", () => {
+            const countElement = likeIcon.nextElementSibling;
+            let count = parseInt(countElement?.textContent || "0");
+
+            if (likeIcon.classList.contains("text-sky-500")) {
+              likeIcon.classList.remove("text-sky-500");
+              likeIcon.classList.add("text-white");
+              countElement.textContent = count - 1;
+            } else {
+              likeIcon.classList.add("text-sky-500");
+              likeIcon.classList.remove("text-white");
+              countElement.textContent = count + 1;
+            }
+          });
+        });
+
+        dislikeIcons.forEach((dislikeIcon) => {
+          dislikeIcon.addEventListener("click", () => {
+            const countElement = dislikeIcon.nextElementSibling;
+            let count = parseInt(countElement?.textContent || "0");
+
+            if (dislikeIcon.classList.contains("text-gray-400")) {
+              dislikeIcon.classList.remove("text-gray-400");
+              dislikeIcon.classList.add("text-white");
+              countElement.textContent = count - 1;
+            } else {
+              dislikeIcon.classList.add("text-gray-400");
+              dislikeIcon.classList.remove("text-white");
+              countElement.textContent = count + 1;
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body class="bg-slate-950 text-white font-sans">
+    <header id="navbar">
+
+    </header>
+    <!-- Hero Section -->
+    <section class="relative z-0">
+      <!-- Background Image -->
+      <img
+        src="https://i.pinimg.com/736x/40/6f/fc/406ffc707f20558aee72d074d77215c2.jpg"
+        alt="Banner"
+        class="w-full h-[500px] sm:h-[600px] md:h-[650px] lg:h-[723px] object-cover"/>
+
+      <div class="absolute  left-5 sm:left-10 top-[58%] md:left-20 -translate-y-1/2 space-y-3 sm:space-y-4">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold font-poppins text-white">
+          The Witcher Season 1
+        </h1>
+        <div class="flex space-x-1 mt-1 sm:mt-2 text-yellow-400 text-base sm:text-lg">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-lg sm:text-xl font-roboto text-white">2h 39mn</p>
+        <div class="flex space-x-3 mt-3 sm:space-x-4">
+          <div class="w-8 h-8 sm:w-9 sm:h-9 flex justify-center items-center bg-black rounded-full outline outline-1 outline-sky-500">
+            <i class="fa-solid fa-bookmark text-lg sm:text-2xl text-white cursor-pointer icon-save"></i>
+          </div>
+          <div class="w-8 h-8 sm:w-9 sm:h-9 flex justify-center items-center bg-black rounded-full outline outline-1 outline-sky-500">
+            <i class="fa-solid fa-thumbs-up text-lg sm:text-2xl text-white cursor-pointer icon-like"></i>
+          </div>
+          <div class="w-8 h-8 sm:w-9 sm:h-9 flex justify-center items-center bg-black rounded-full outline outline-1 outline-sky-500">
+            <i class="fa-solid fa-thumbs-down text-lg sm:text-2xl text-white cursor-pointer icon-dislike"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Responsive Button Wrapper -->
+    <div class="absolute top-[75%] w-full px-5 grid grid-flow-col justify-center gap-4 sm:flex sm:justify-end sm:right-20 sm:w-auto">
+      <button
+        class="w-40 flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-700 px-4 py-2 rounded text-white text-lg shadow">
+        <i class="fa-solid fa-caret-left"></i>
+        Watch Now
+      </button>
+
+      <button
+        class="w-40 flex items-center justify-center border border-sky-300 px-4 py-2 rounded text-white text-lg">
+        Preview
+      </button>
+    </div>
+    </section>
+
+    <!-- Movie Section -->
+    <section class="relative z-10 -mt-16 px-20">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <img
+          src="https://i.pinimg.com/736x/bc/12/da/bc12da1318484bb30baa213d60e558d9.jpg"
+          alt="Movie 1"
+          class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl"/>
+
+        <img
+          src="https://i.pinimg.com/736x/a2/7f/a8/a27fa8dcb6f8d790cd5f7a1e66779ea7.jpg"
+          alt="Movie 2"
+          class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl"/>
+
+        <img
+          src="https://i.pinimg.com/736x/d1/4b/7f/d14b7f505343b5fc79037040b1076938.jpg"
+          alt="Movie 3"
+          class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl"/>
+
+        <img
+          src="https://i.pinimg.com/736x/81/89/71/8189713519a9772dec267760c0461f94.jpg"
+          alt="Movie 4"
+          class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl"/>
+
+        <img
+          src="https://i.pinimg.com/736x/e8/d6/48/e8d64836cc96bf1b57228ccf8641655a.jpg"
+          alt="Movie 5"
+          class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl"/>
+
+        <img
+          src="https://i.pinimg.com/736x/11/a0/17/11a01746e4c7f09c0231feebc9e0af5c.jpg"
+          alt="Movie 6"
+          class="w-full h-56 object-cover rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl"/>
+      </div>
+    </section>
+
+    <section class="p-10 mt-10">
+      <h3 class="text-4xl font-bold">About The Witcher</h3>
+      <p class="mt-10">
+        The Witcher Season 1 drops us into its vast and varied world by
+        introducing three characters whose paths interweave in epic fashion: the
+        monster hunter Geralt of Rivia (Henry Cavill), famed for his
+        swordsmanship and supernatural abilities; the endangered Princess of
+        Cintra, Ciri (Freya Allan); and the mage-in-training
+      </p>
+      <h3 class="mt-10 text-4xl font-bold">Director</h3>
+      <p class="mt-10">
+        Alik Sakharov (The Witcher Season 1 director) on Henry Cavill: "Henry
+        Cavill is the best thing in the Witcher [...] he is a very flexible
+        actor who is able to listen and learn".
+      </p>
+      <h3 class="mt-10 text-4xl font-bold">More Movies</h3>
+      <div
+        class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+        <div
+          class="relative group bg-gray-100 rounded-xl shadow-md overflow-hidden transition-all">
+          <img
+            class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500"
+            src="https://i.pinimg.com/736x/c9/7e/b8/c97eb8b52aff71bff0de81b345d1dbff.jpg"
+            alt="Sherk"/>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+          <div
+            class="absolute bottom-0 p-4 text-white opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 transition-all duration-500">
+            <h3 class="text-xl font-bold">Sherk</h3>
+            <p class="text-sm text-gray-300">Comedy/Adventure</p>
+            <div class="flex space-x-1 mt-2 text-yellow-400 text-lg">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative group bg-gray-100 rounded-xl shadow-md overflow-hidden transition-all">
+          <img
+            class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500"
+            src="https://i.pinimg.com/736x/17/66/e0/1766e0ef3cc4337e7983f180c7f41986.jpg"
+            alt="Coco2"/>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+          <div
+            class="absolute bottom-0 p-4 text-white opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 transition-all duration-500">
+            <h3 class="text-xl font-bold">Coco2</h3>
+            <p class="text-sm text-gray-300">Comedy/Adventure</p>
+            <div class="flex space-x-1 mt-2 text-yellow-400 text-lg">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative group bg-gray-100 rounded-xl shadow-md overflow-hidden transition-all">
+          <img
+            class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500"
+            src="https://i.pinimg.com/736x/ee/9f/21/ee9f21432dac3689d2d3100d2055f151.jpg"
+            alt="Toy Story"/>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+          <div
+            class="absolute bottom-0 p-4 text-white opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 transition-all duration-500">
+            <h3 class="text-xl font-bold">Toy Story</h3>
+            <p class="text-sm text-gray-300">Musical/Comedy</p>
+            <div class="flex space-x-1 mt-2 text-yellow-400 text-lg">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative group bg-gray-100 rounded-xl shadow-md overflow-hidden transition-all">
+          <img
+            class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500"
+            src="https://i.pinimg.com/736x/24/d7/d7/24d7d70d7865e14fe2ffcd389d8cac81.jpg"
+            alt="Peterpan"/>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+          <div
+            class="absolute bottom-0 p-4 text-white opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 transition-all duration-500">
+            <h3 class="text-xl font-bold">Peterpan</h3>
+            <p class="text-sm text-gray-300">Comedy/Adventure</p>
+            <div class="flex space-x-1 mt-2 text-yellow-400 text-lg">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative group bg-gray-100 rounded-xl shadow-md overflow-hidden transition-all">
+          <img
+            class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500"
+            src="https://i.pinimg.com/736x/aa/de/67/aade67dca406e3b1c795510256c952ec.jpg"
+            alt="The Croods"/>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+          <div
+            class="absolute bottom-0 p-4 text-white opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 transition-all duration-500">
+            <h3 class="text-xl font-bold">Croods</h3>
+            <p class="text-sm text-gray-300">Comedy/Adventure</p>
+            <div class="flex space-x-1 mt-2 text-yellow-400 text-lg">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative group bg-gray-100 rounded-xl shadow-md overflow-hidden transition-all">
+          <img
+            class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500"
+            src="https://i.pinimg.com/736x/99/5e/ac/995eac4fbdd7a9197983391c2ca2fe28.jpg"
+            alt="Encanto"/>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+          <div
+            class="absolute bottom-0 p-4 text-white opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 transition-all duration-500">
+            <h3 class="text-xl font-bold">Encanto</h3>
+            <p class="text-sm text-gray-300">Comedy/Adventure</p>
+            <div class="flex space-x-1 mt-2 text-yellow-400 text-lg">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Comment -->
+      <h3 class="mt-10 text-4xl font-bold">Comments</h3>
+      <div class="mt-10 w-full overflow-x-auto whitespace-nowrap p-4">
+        <!-- Start Comment Cards Scrollable -->
+        <div
+          class="inline-block border border-blue-400 p-4 w-80 rounded-2xl bg-black text-white mr-4 align-top"
+        >
+          <div class="flex items-center space-x-4">
+            <img
+              class="rounded-full w-[50px] h-[50px]"
+              src="https://i.pinimg.com/736x/a8/d9/53/a8d953aeb7cd21004d3672d900d279a3.jpg"
+              alt="Profile"
+            />
+            <p class="text-gray-400">Jonh Ni</p>
+          </div>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-white text-sm">This is very good looking.</p>
+            <div class="flex space-x-2">
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-up text-base text-white cursor-pointer icon-like"
+                ></i>
+                <small class="text-white mx-1">+1</small>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-down text-base text-white cursor-pointer icon-dislike"
+                ></i>
+                <small class="text-white mx-1">0</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="inline-block border border-blue-400 p-4 w-80 rounded-2xl bg-black text-white mr-4 align-top">
+          <div class="flex items-center space-x-4">
+            <img
+              class="rounded-full w-[50px] h-[50px]"
+              src="https://i.pinimg.com/736x/aa/1c/3f/aa1c3f657b93842b4c1ad1d0ca9f496e.jpg"
+              alt="Profile"/>
+            <p class="text-gray-400">Janie</p>
+          </div>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-white text-sm">This is very good movies.</p>
+            <div class="flex space-x-2">
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-up text-base text-white cursor-pointer icon-like"
+                ></i>
+                <small class="text-white mx-1">+1</small>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-down text-base text-white cursor-pointer icon-dislike"
+                ></i>
+                <small class="text-white mx-1">0</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="inline-block border border-blue-400 p-4 w-80 rounded-2xl bg-black text-white mr-4 align-top">
+          <div class="flex items-center space-x-4">
+            <img
+              class="rounded-full w-[50px] h-[50px]"
+              src="https://i.pinimg.com/736x/21/10/fb/2110fb0f833375411efcc8b153a26d53.jpg"
+              alt="Profile"/>
+            <p class="text-gray-400">Nin nin</p>
+          </div>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-white text-sm">This is very good.</p>
+            <div class="flex space-x-2">
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-up text-base text-white cursor-pointer icon-like"></i>
+                <small class="text-white mx-1">+1</small>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-down text-base text-white cursor-pointer icon-dislike"
+                ></i>
+                <small class="text-white mx-1">0</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="inline-block border border-blue-400 p-4 w-80 rounded-2xl bg-black text-white mr-4 align-top" >
+          <div class="flex items-center space-x-4">
+            <img
+              class="rounded-full w-[50px] h-[50px]"
+              src="https://i.pinimg.com/736x/70/4a/05/704a05692a392769076554eaad4e3514.jpg"
+              alt="Profile"/>
+            <p class="text-gray-400">Bunthai</p>
+          </div>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-white text-sm">Really like it.</p>
+            <div class="flex space-x-2">
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-up text-base text-white cursor-pointer icon-like"
+                ></i>
+                <small class="text-white mx-1">+1</small>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-down text-base text-white cursor-pointer icon-dislike"
+                ></i>
+                <small class="text-white mx-1">0</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inline-block border border-blue-400 p-4 w-80 rounded-2xl bg-black text-white mr-4 align-top">
+          <div class="flex items-center space-x-4">
+            <img
+              class="rounded-full w-[50px] h-[50px]"
+              src="https://i.pinimg.com/736x/ff/9f/02/ff9f02332ef2451d8fe1204b17154d9c.jpg"
+              alt="Profile"/>
+            <p class="text-gray-400">SoCheat</p>
+          </div>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-white text-sm">Movie is very goods.</p>
+            <div class="flex space-x-2">
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-up text-base text-white cursor-pointer icon-like"></i>
+                <small class="text-white mx-1">+1</small>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-down text-base text-white cursor-pointer icon-dislike"></i>
+                <small class="text-white mx-1">0</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="inline-block border border-blue-400 p-4 w-80 rounded-2xl bg-black text-white mr-4 align-top">
+          <div class="flex items-center space-x-4">
+            <img
+              class="rounded-full w-[50px] h-[50px]"
+              src="https://i.pinimg.com/736x/17/d0/cb/17d0cbc2650bfbb9a773ba3433a17e38.jpg"
+              alt="Profile"/>
+            <p class="text-gray-400">Bora</p>
+          </div>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-white text-sm">Wow look so cool this movie!.</p>
+            <div class="flex space-x-2">
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-up text-base text-white cursor-pointer icon-like"
+                ></i>
+                <small class="text-white mx-1">+1</small>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-down text-base text-white cursor-pointer icon-dislike"
+                ></i>
+                <small class="text-white mx-1">0</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="inline-block border border-blue-400 p-4 w-80 rounded-2xl bg-black text-white mr-4 align-top">
+          <div class="flex items-center space-x-4">
+            <img
+              class="rounded-full w-[50px] h-[50px]"
+              src="https://i.pinimg.com/736x/ff/27/94/ff27945248d9e5b2ee4e0dae8b4fede8.jpg"
+              alt="Profile"/>
+            <p class="text-gray-400">So Cheata</p>
+          </div>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-white text-sm">Movie is pupoler.</p>
+            <div class="flex space-x-2">
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-up text-base text-white cursor-pointer icon-like"></i>
+                <small class="text-white mx-1">+1</small>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-down text-base text-white cursor-pointer icon-dislike"
+                ></i>
+                <small class="text-white mx-1">0</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="inline-block border border-blue-400 p-4 w-80 rounded-2xl bg-black text-white mr-4 align-top">
+          <div class="flex items-center space-x-4">
+            <img
+              class="rounded-full w-[50px] h-[50px]"
+              src="https://i.pinimg.com/736x/a8/1c/9e/a81c9eeff3a891e136ef63ee41ea8e89.jpg"
+              alt="Profile"/>
+            <p class="text-gray-400">Nita</p>
+          </div>
+          <div class="flex justify-between items-center mt-2">
+            <p class="text-white text-sm">Very nice post!</p>
+            <div class="flex space-x-2">
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-up text-base text-white cursor-pointer icon-like"
+                ></i>
+                <small class="text-white mx-1">+1</small>
+              </div>
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-thumbs-down text-base text-white cursor-pointer icon-dislike"></i>
+                <small class="text-white mx-1">0</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- text form comment  -->
+      <form class="border border-blue-400 rounded-lg p-4 mt-10 w-[600px]">
+        <textarea
+          id="comment"
+          name="comment"
+          class="w-full h-24 p-4 mt-5 bg-gray-500 rounded-lg resize-none"
+          placeholder="Add comments"
+          required></textarea>
+
+        <button
+          type="submit"
+          class="mt-5 bg-sky-500 hover:bg-sky-700 text-white px-4 py-2 rounded">
+          Send
+        </button>
+      </form>
+    </section>
+    <footer id="footer"></footer>
+  </body>
+</html>

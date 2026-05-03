@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Login</title>
+  <link rel="stylesheet" href="./src/output.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+</head>
+<body class="bg-[#030A1B] text-white">
+  <div class="relative min-h-screen w-full">
+    <!-- Background image -->
+    <div class="absolute inset-0 bg-cover bg-[url('img/login.jpg')] z-0"></div>
+
+    <!-- Overlay with blur -->
+    <div class="absolute inset-0 backdrop-blur-sm shadow-lg z-10">
+      <div class="flex justify-center items-center min-h-screen px-4 py-10">
+        <div class="bg-[#2D3250] w-full max-w-md rounded-3xl border border-gray-300 overflow-hidden flex flex-col z-20">
+          
+          <!-- Login Form -->
+          <div class="w-full p-8 flex items-center justify-center">
+            <div class="w-full max-w-sm text-white">
+              <h2 class="text-4xl font-semibold text-center text-white mb-2">C I N E M A</h2>
+              <p class="text-center text-gray-300 mb-6">Sign in to your account</p>
+
+              <form>
+                <!-- Email -->
+                <div class="mb-4">
+                  <label class="block mb-1 text-sm" for="email">Email</label>
+                  <div class="flex items-center bg-[#424769] rounded px-3 py-2 gap-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input class="bg-transparent w-full outline-none text-white" id="email" type="email" placeholder="mymail@mymail.com" />
+                  </div>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-4">
+                  <label class="block mb-1 text-sm" for="password">Password</label>
+                  <div class="flex items-center bg-[#424769] rounded px-3 py-2 gap-2">
+                    <i class="fa-solid fa-unlock"></i>
+                    <input class="bg-transparent w-full outline-none text-white" id="password" type="password" placeholder="••••••••" />
+                    <button type="button" onclick="togglePassword()" class="text-gray-400">
+                      <i id="eyeIcon" class="fa-solid fa-eye"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Remember me -->
+                <div class="mb-6 flex items-center gap-2">
+                  <input type="checkbox" id="remember" class="accent-white" />
+                  <label for="remember" class="text-sm">Remember me</label>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="w-full bg-white text-[#2D3250] font-semibold py-2 rounded hover:bg-gray-300 transition">
+                  Sign In
+                </button>
+              </form>
+
+              <!-- Additional Links -->
+              <div class="text-sm text-center text-gray-300 mt-4">
+                Don’t have an account? <a href="./signup.html" class="underline text-white">Sign up</a>
+              </div>
+              <div class="text-sm text-center mt-2">
+                <a href="#" class="text-gray-400 underline">Forgot password</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+  <script>
+    function togglePassword() {
+      const input = document.getElementById("password");
+      const icon = document.getElementById("eyeIcon");
+      if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+      } else {
+        input.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      }
+    }
+  </script>
+</body>
+</html>

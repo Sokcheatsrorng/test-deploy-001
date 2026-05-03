@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabymer - Contact Us</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Stream the latest movies and TV shows in HD. Discover action, thriller, drama, and more. No ads, just entertainment. Watch now on CinemaFlix!">
+    <meta name="keywords" content="movies, TV shows, streaming, watch online, action, thriller, drama, HD movies, Sabymer">
+    <meta name="author" content="Movie Stream Team">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Movie Stream - Watch Movies & TV Shows Online">
+    <meta property="og:description" content="Enjoy unlimited streaming of blockbuster movies and binge-worthy TV shows. Only on Sabymer.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media/banner.jpg">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:site_name" content="CinemaFlix">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Movie Stream - Watch Movies & TV Shows Online">
+    <meta name="twitter:description" content="Watch movies and TV shows without limits. Stream now with Sabymer.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media/banner.jpg">
+    <meta name="twitter:site" content="@Sabymer">
+
+    <!-- Styles and Scripts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/output.css">
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/footer.js" type="module"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(180deg, rgba(17,24,39,0.8) 0%, rgba(17,24,39,1) 100%); }
+        .navbar { backdrop-filter: blur(10px); background: rgba(17, 24, 39, 0.7); }
+        .animate-text-color-change { animation: colorChange 3s infinite; }
+        @keyframes colorChange {
+            0% { color: #ffffff; }
+            50% { color: #3b82f6; }
+            100% { color: #ffffff; }
+        }
+        .animate-fade-in { animation: fadeIn 1s ease-in-out; }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navbar -->
+    <nav id="navbar">
+
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative min-h-screen bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/thatanjan/netflix-clone-yt/youtube/media/banner.jpg')">
+        <div class="gradient-bg absolute inset-0"></div>
+        <section class="pt-32 px-4 text-center">
+            <h1 class="animate-text-color-change text-4xl sm:text-5xl font-bold">Get in Touch with CinemaFlix</h1>
+            <p class="mt-4 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">Have questions or feedback? We're here to help. Reach out to our team and start a conversation today!</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-12 px-4 flex items-center justify-center">
+            <div class="max-w-4xl w-full bg-white/10 backdrop-blur-md rounded-xl shadow-2xl p-6 flex flex-col md:flex-row animate-fade-in">
+                <!-- Contact Information -->
+                <div class="md:w-1/2 p-6 bg-gray-800/80 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
+                    <p class="text-sm mb-6 text-gray-300">Say something to start a live chat!</p>
+                    <div class="space-y-4">
+                        <p class="flex items-center"><i class="fas fa-phone mr-3 text-blue-500"></i> +855 3489 789</p>
+                        <p class="flex items-center"><i class="fas fa-envelope mr-3 text-blue-500"></i> demo@gmail.com</p>
+                        <p class="flex items-center"><i class="fas fa-map-marker-alt mr-3 text-blue-500"></i> 123 Phnom Penh, Cambodia</p>
+                    </div>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500 transition"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="md:w-1/2 p-6 flex flex-col justify-between">
+                    <div>
+                        <p class="text-gray-300 mb-6">Any question or remark? Just write us a message!</p>
+                        <form class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="First Name" class="w-full p-3 bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition">
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Last Name" class="w-full p-3 bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition">
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Email" class="w-full p-3 bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition">
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="Phone Number" class="w-full p-3 bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition">
+                            </div>
+                            <div>
+                                <textarea placeholder="Write your message" class="w-full p-3 bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-blue-500 transition resize-none h-24"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <button type="submit" class="mt-6 w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition">Send Message</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Toggle mobile menu
+        document.getElementById('mobile-menu-button').addEventListener('click', function (event) {
+            event.stopPropagation();
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Toggle search input
+        document.getElementById('search-button').addEventListener('click', function (event) {
+            event.stopPropagation();
+            const searchContainer = document.getElementById('search-container');
+            const searchInput = document.getElementById('search-input');
+            searchContainer.style.width = window.innerWidth < 640 ? '80%' : '60%';
+            setTimeout(() => {
+                searchInput.classList.remove('opacity-0');
+                searchInput.focus();
+            }, 150);
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Close search
+        document.getElementById('search-close').addEventListener('click', function () {
+            closeSearch();
+        });
+
+        // Close search on outside click
+        document.addEventListener('click', function (event) {
+            const searchContainer = document.getElementById('search-container');
+            const searchButton = document.getElementById('search-button');
+            if (!searchContainer.contains(event.target) && !searchButton.contains(event.target) && searchContainer.style.width !== '0px' && searchContainer.style.width !== '') {
+                closeSearch();
+            }
+        });
+
+        // Close search on escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeSearch();
+            }
+        });
+
+        // Close search function
+        function closeSearch() {
+            const searchContainer = document.getElementById('search-container');
+            const searchInput = document.getElementById('search-input');
+            searchInput.classList.add('opacity-0');
+            setTimeout(() => {
+                searchContainer.style.width = '0';
+                searchInput.value = '';
+            }, 100);
+        }
+
+        // Close mobile menu on outside click
+        document.addEventListener('click', function (event) {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target) && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Handle search submission
+        document.getElementById('search-input').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                alert('Searching for: ' + this.value);
+                closeSearch();
+            }
+        });
+
+        // Adjust search width on resize
+        window.addEventListener('resize', function () {
+            const searchContainer = document.getElementById('search-container');
+            if (searchContainer.style.width !== '0px' && searchContainer.style.width !== '') {
+                searchContainer.style.width = window.innerWidth < 640 ? '80%' : '60%';
+            }
+        });
+    </script>
+</body>
+</html>
