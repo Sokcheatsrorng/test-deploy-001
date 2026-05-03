@@ -6,7 +6,7 @@ export const navbarComponent = () => {
             <div class="flex items-center justify-between h-14 sm:h-16 px-3 sm:px-6">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <a href="/index.html" class="flex items-center">
+                        <a href="./index.html" class="flex items-center">
                             <i class="fas fa-play-circle text-cyan-400 text-2xl"></i>
                             <span class="ml-2 text-white font-semibold hidden md:block">SabyMer</span>
                         </a>
@@ -30,7 +30,7 @@ export const navbarComponent = () => {
                         <a href="/index.html" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">Home<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
                         <a href="/series.html" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">Series<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
                         <a href="/pages/animation.html" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">Animation<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
-                        <a href="/aboutUs.html" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">About Us<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
+                        <a href="./aboutUs.html" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">About Us<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
                         <a href="/contact.html" class="text-white hover:text-cyan-300 transition-colors duration-300 font-medium relative group pb-1">Contact<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span></a>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ export const navbarComponent = () => {
                 <a href="/index.html" class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">Home<span class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span></a>
                 <a href="/series.html" class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">Series<span class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span></a>
                 <a href="/pages/animation.html" class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">Animation<span class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span></a>
-                <a href="/aboutUs.html" class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">About Us<span class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span></a>
+                <a href="./aboutUs.html" class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">About Us<span class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span></a>
                 <a href="/contact.html" class="block px-3 py-2 text-white hover:bg-cyan-800/50 hover:text-cyan-300 transition-colors duration-300 rounded-md relative group">Contact<span class="absolute bottom-0 left-3 right-3 h-0.5 bg-cyan-400 scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span></a>
             </div>
         </div>
